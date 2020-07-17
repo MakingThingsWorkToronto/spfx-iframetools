@@ -1,6 +1,15 @@
 ## spfx-iframetools
 
-This is where you include your WebPart documentation.
+Hides the SharePoint Hub Navigation when the page is viewed in an iframe.  
+
+### Using the web part
+
+Deploy to the App Catalog. 
+
+Add the web part to the end of the page.
+
+Edit the web part and enable Hide in iFrame setting.
+
 
 ### Building the code
 
