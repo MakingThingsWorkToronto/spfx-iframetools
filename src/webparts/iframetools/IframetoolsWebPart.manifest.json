@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "e16e5d0f-fdab-4a23-812d-83750fc8b147",
+  "alias": "IframetoolsWebPart",
+  "componentType": "WebPart",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAz1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOXWEanaQEGBkAAAAAAAAAAAAAAAAAAAAAAAAGJicMSUwOVFgZmZ8anaMUen8AAQEBBgYTdHkDDxAOVlkTdHgUd3wBBwgNUVQUd3sOU1YQXmIZmJ4ODw9tcHIaGxzR1tro6+3V2t3////m6esMDA1fYmRnamy6wMTM0tavtLhhZGYNTE84Z2pis7gxWVwBCQkQX2MRaW0Sa28Yk5kNTVABBwcMSEsUdnsBCAgUeX4GISMKP0FZvKqUAAAAEXRSTlMALmZLASRkNe+ObdP08vErVafKe8MAAAABYktHRACIBR1IAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH5AcPEx4Kgbb0mgAAAQ5JREFUWMPt10lTwkAQhuERN1QUO9HGIXEBA0QUNwIGF7bw/38Tk0kwKbQKeywLD/0eqJrD91zpCMH9gzYKSZtbYnunQG5XFCFtb/8A6JWE+rFs1ckpVmxilhoLOANZRaOqUo0FOC7Ic5P9xSVcOTGAZkJN7TEBjAS9XwBYB+lek3Il1DEDlEAu3meAB40mqQZ4S0DLvyHkt74C7VtCbQYYYIABBhhg4O8B/47QN3/vnfsVPTw+PXc/X50lIPjBTdPrv+SfQR4IIBy8rujNw/fsNQi1kAIfMKxRz7xKCKMFYLJPBQ2o/Zi+TwRHH9uTqckecTrRxzZANDMsis/9Q4OvjFxHonz8q8rr/mTj4ubDg7AtNbhFCwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wNy0xNVQxOTozMDoxMCswMDowMPSPdu0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDctMTVUMTk6MzA6MTArMDA6MDCF0s5RAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==",
+    "title": { "default": "iFrame Tools" },
+    "description": { "default": "Allows users to control visibility of UI components when run in an iframe" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "hideControls": false
+    }
+  }]
+}

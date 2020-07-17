@@ -1,0 +1,8 @@
+.iframetools { 
+  background-color: "[theme: themePrimary, default: #0078d7]";
+  .label { font-size: 2rem; padding: 1rem; color: "[theme: white, default: #0078d7]"; font-weight: 100; font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif; }
+}
+
+body.hideInIframe {
+  :global(div.ms-HubNav), .hideControl { display: none !important; }
+}
