@@ -27,15 +27,36 @@ export default class IframetoolsWebPart extends BaseClientSideWebPart <IIframeto
       console.log("iFrame Tools: In edit mode");
     } else if(this.properties.hideControls && inIFrame ){
       element = React.createElement(emptytools, {});
-      document.body.classList.add(styles.hideInIframe);
+      this._hideSelf();
+      this._hideControls();
       console.log("iFrame Tools: Firing up iframe tools");
     } else {
+      this._hideSelf();
       console.log("iFrame Tools: Doing nothing, should we hide controls: " + this.properties.hideControls + " are we in iframe: " + inIFrame);
     }
 
     ReactDom.render(element, this.domElement);
 
   }
+  
+  private _hideSelf() : void {
+    const section = this._findAncestor(this.domElement, ".ControlZone");
+    if(section) section.style.display = "none";
+  }
+
+  private _hideControls() : void {
+    window.setInterval(()=>{
+      if(document.body.className.indexOf(styles.hideInIframe) === -1) {
+        document.body.className += " " + styles.hideInIframe;
+        console.log("iFrame Tools: Hiding Content.");
+      }
+    },1000);
+  }
+
+  private _findAncestor (el:any, sel:string) {
+    while ((el = el.parentElement) && !((el.matches || el.matchesSelector).call(el,sel)));
+    return el;
+}
 
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
